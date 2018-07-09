@@ -1,7 +1,7 @@
 if __name__ == '__main__':
     a = ['aaaaaaaaaaaaaaaaaaaa','bbbbbbbbbbbbbbbbbbb','ccccccccccccccc','ddddddddddddddddddddd','eeeeeeeeeeeeeeeeeeeeeeee']
 
-    num = 10
+    num = 13
 
 
 
