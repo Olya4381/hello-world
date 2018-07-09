@@ -1,5 +1,10 @@
 if __name__ == '__main__':
-    a = ['aaaaaaaaaaaaaaaaaaaa', 'bbbbbbbbbbbbbbbbbbb','ccccccccccccccc','ddddddddddddddddddddd','eeeeeeeeeeeeeeeeeeeeeeee']
+    a = [
+        'aaaaaaaaaaaaaaaaaaaa',
+        'bbbbbbbbbbbbbbbbbbb',
+        'ccccccccccccccc',
+        'ddddddddddddddddddddd',
+        'eeeeeeeeeeeeeeeeeeeeeeee']
 
     num = 13
 
@@ -8,5 +13,10 @@ if __name__ == '__main__':
 
     a=5
     b=6
+
+
+
+
+
 
     print("ololo")

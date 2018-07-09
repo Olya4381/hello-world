@@ -11,6 +11,6 @@ if __name__ == '__main__':
 
     b=6
 
-    print("lala")
 
-    print("ololo")
+
+    print("lala")
