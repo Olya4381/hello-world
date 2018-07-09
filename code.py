@@ -22,10 +22,4 @@ if __name__ == '__main__':
 
 
 
-
-
-
-
-    print("lala")
-
     print("ololo")
