@@ -1,17 +1,5 @@
-if __name__=='__main__':
-    a = ['aaaaaaaaaaaaaaaaaaaa','bbbbbbbbbbbbbbbbbbb', 'ccccccccccccccc','ddddddddddddddddddddd','eeeeeeeeeeeeeeeeeeeeeeee']
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    a = [ 'aaaaaaaaaaaaaaaaaaaa','bbbbbbbbbbbbbbbbbbb','ccccccccccccccc', 'ddddddddddddddddddddd','eeeeeeeeeeeeeeeeeeeeeeee']
 
     num = 10
 
@@ -19,5 +7,15 @@ if __name__=='__main__':
 
     string2 = [[1, 2, 3, 4, 5, 6], [7, 8, 9, 0, 1, 2], [3, 4, 5, 6, 7, 8]]
 
-    print(string)
+
+
+
+
+
+
+    print("lala")
+
+
+
+    print("ololo")
 
