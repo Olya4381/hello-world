@@ -1,7 +1,6 @@
 if __name__ == '__main__':
     a = [
-        'aaaaaaaaaaaaaaaaaaaa',
-        'bbbbbbbbbbbbbbbbbbb',
+        'aaaaaaaaaaaaaaaaaaaa','bbbbbbbbbbbbbbbbbbb',
         'ccccccccccccccc',
         'ddddddddddddddddddddd',
         'eeeeeeeeeeeeeeeeeeeeeeee']
