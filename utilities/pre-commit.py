@@ -3,6 +3,7 @@ import argparse
 from os.path import abspath, dirname, join, basename
 from subprocess import Popen, PIPE
 
+
 def shell_command(command):
     # Запускаем подпроцесс
     proc = Popen(command, stdout=PIPE, stderr=PIPE)
@@ -10,7 +11,8 @@ def shell_command(command):
     proc.wait()
     # Функция для преобразования данных
     #    (конвертируем в строку, удаляем "\r\n")
-    transform = lambda x: ' '.join(x.decode('utf-8').split())
+
+    def transform(x): return ' '.join(x.decode('utf-8').split())
     # Считываем (и преобразуем) поток stdout
     report = [transform(x) for x in proc.stdout]
     # Добавляем поток stderr
@@ -43,14 +45,17 @@ def head_revision():
     targets = [join(dirname(abspath(x)), basename(x)) for x in targets]
     return result_code, targets
 
-def formating_python_code(exec,name_comply_file, targets):
-    code,report=shell_command(
-        [exec,name_comply_file]+ targets)
-        
+
+def formating_python_code(exec, name_comply_file, targets):
+    code, report = shell_command(
+        [exec, name_comply_file] + targets)
+    print(name_comply_file,targets)
+
     for i in report:
         print(i)
 
     return code
+
 
 if __name__ == '__main__':
 
@@ -63,15 +68,21 @@ if __name__ == '__main__':
         print("Don't create checking")
 
     if params.get('check') is not None and len(params.get('check')) == 0:
-        params['check'] = [join(dirname(abspath(__file__)), 'autoformating_python_pep8.py')]
+        params['check'] = [
+            join(
+                dirname(
+                    abspath(__file__)),
+                'autoformating_python_pep8.py')]
 
     code, targets = head_revision()
     if code != 0:
         print("Error: can't get file")
         exit(1)
 
-
-    code = formating_python_code(params.get('exec'),params.get('check'),targets)
+    code = formating_python_code(
+        params.get('exec'),
+        params.get('check'),
+        targets)
     if code != 0:
         print("Error: can't autoformating")
         exit(1)
