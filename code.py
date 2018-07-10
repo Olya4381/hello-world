@@ -1,5 +1,10 @@
 if __name__ == '__main__':
-    a = ['aaaaaaaaaaaaaaaaaaaa','bbbbbbbbbbbbbbbbbbb','ccccccccccccccc','ddddddddddddddddddddd','eeeeeeeeeeeeeeeeeeeeeeee']
+    a = [
+        'aaaaaaaaaaaaaaaaaaaa',
+        'bbbbbbbbbbbbbbbbbbb',
+        'ccccccccccccccc',
+        'ddddddddddddddddddddd',
+        'eeeeeeeeeeeeeeeeeeeeeeee']
 
     num = 13
     string = 'my str'
@@ -9,4 +14,4 @@ if __name__ == '__main__':
 
     print("ololo")
 
-    print(    "vy"     )
+    print("vy")

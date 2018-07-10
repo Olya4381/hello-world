@@ -47,9 +47,16 @@ def head_revision():
 
 
 def formating_python_code(exec, name_comply_file, targets):
+    # execute file for autoformating
     code, report = shell_command(
         [exec, name_comply_file] + targets)
-    print(name_comply_file,targets)
+
+    for i in report:
+        print(i)
+
+    # git add change
+    code, report = shell_command(
+        ['git', 'add', '-u'])
 
     for i in report:
         print(i)
@@ -83,6 +90,7 @@ if __name__ == '__main__':
         params.get('exec'),
         params.get('check'),
         targets)
+
     if code != 0:
         print("Error: can't autoformating")
         exit(1)
