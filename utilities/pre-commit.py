@@ -118,16 +118,16 @@ if __name__ == '__main__':
     if code != 0:
         print("Error: can't get file")
         exit(1)
-    print("Target", targets)
-    # formating code
-    code = formating_python_code(
-        params.get('exec'),
-        params.get('check'),
-        targets)
+    if len(targets) != 0:
+        # formating code
+        code = formating_python_code(
+            params.get('exec'),
+            params.get('check'),
+            targets)
 
-    if code != 0:
-        print("Error: can't autoformating")
-        exit(1)
+        if code != 0:
+            print("Error: can't autoformating")
+            exit(1)
 
     print("File formated!")
 
