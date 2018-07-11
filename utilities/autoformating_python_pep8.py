@@ -1,7 +1,17 @@
+"""
+File for autoformating pytohn's file
+Arguments - file files fo formating.
+"""
 import sys
 
 
-def main(argv=None, apply_config=True):
+def main(argv=None):
+    """
+
+    :param argv: name of file for firmatinf
+    :type: list
+    :return: redut code
+    """
     try:
         import autopep8
     except Exception:
@@ -17,4 +27,5 @@ def main(argv=None, apply_config=True):
 
 
 if __name__ == '__main__':
+
     sys.exit(main())
